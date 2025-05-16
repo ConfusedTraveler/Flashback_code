@@ -4,6 +4,7 @@ import torch.nn.functional as F
 import numpy as np
 from enum import Enum
 
+# Enum的好处没有充分理解到
 class Rnn(Enum):
     ''' The available RNN units '''
     
@@ -11,6 +12,7 @@ class Rnn(Enum):
     GRU = 1    
     LSTM = 2    
     
+    # @staticmethod 是和类有关但不需要访问类本身或实例的函数
     @staticmethod
     def from_string(name):
         if name == 'rnn':
